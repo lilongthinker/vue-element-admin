@@ -61,6 +61,9 @@ const InlineEditTable = _import('example/table/inlineEditTable');
 const Form = _import('example/form');
 const Tab = _import('example/tab/index');
 
+const contract = resolve => require(['../views/example/contract'],resolve)
+const todo = resolve => require(['../views/example/todo'],resolve)
+
 /* permission */
 const Permission = _import('permission/index');
 
@@ -212,6 +215,8 @@ export const asyncRouterMap = [
       { path: 'form/create', component: Form, name: '创建Form' },
 
       { path: 'tab/index', component: Tab, name: 'Tab' }
+      { path: 'contract', component: contract, name: '合同' },
+      { path: 'todo/', component: todo, name: 'todo app' },
     ]
   },
   { path: '*', redirect: '/404', hidden: true }

@@ -35,6 +35,8 @@
     "vue-router": "2.5.3",
     "vuedraggable": "2.13.1",
     "vuex": "2.3.1",
+    "webpack-hmr": "^1.0.2",
+    "webpack-loader": "0.0.1",
     "xlsx": "^0.10.8"
   },
   "devDependencies": {
