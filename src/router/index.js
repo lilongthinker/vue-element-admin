@@ -61,27 +61,27 @@ const InlineEditTable = _import('example/table/inlineEditTable');
 const Form = _import('example/form');
 const Tab = _import('example/tab/index');
 
-const contract = resolve => require(['../views/example/contract'],resolve)
-const todo = resolve => require(['../views/example/todo'],resolve)
+const contract = resolve => require(['../views/example/contract'], resolve)
+const todo = resolve => require(['../views/example/todo'], resolve)
 
 /* permission */
 const Permission = _import('permission/index');
 
 Vue.use(Router);
 
- /**
-  * icon : the icon show in the sidebar
-  * hidden : if hidden:true will not show in the sidebar
-  * redirect : if redirect:noredirect will not redirct in the levelbar
-  * noDropdown : if noDropdown:true will not has submenu
-  * meta : { role: ['admin'] }  will control the page role
-  **/
+/**
+ * icon : the icon show in the sidebar
+ * hidden : if hidden:true will not show in the sidebar
+ * redirect : if redirect:noredirect will not redirct in the levelbar
+ * noDropdown : if noDropdown:true will not has submenu
+ * meta : { role: ['admin'] }  will control the page role
+ **/
 
 export const constantRouterMap = [
-    { path: '/login', component: Login, hidden: true },
-    { path: '/authredirect', component: authRedirect, hidden: true },
-    { path: '/404', component: Err404, hidden: true },
-    { path: '/401', component: Err401, hidden: true },
+  { path: '/login', component: Login, hidden: true },
+  { path: '/authredirect', component: authRedirect, hidden: true },
+  { path: '/404', component: Err404, hidden: true },
+  { path: '/401', component: Err401, hidden: true },
   {
     path: '/',
     component: Layout,
@@ -214,9 +214,10 @@ export const asyncRouterMap = [
       { path: 'form/edit', component: Form, name: '编辑Form', meta: { isEdit: true } },
       { path: 'form/create', component: Form, name: '创建Form' },
 
-      { path: 'tab/index', component: Tab, name: 'Tab' }
+      { path: 'tab/index', component: Tab, name: 'Tab' },
       { path: 'contract', component: contract, name: '合同' },
       { path: 'todo/', component: todo, name: 'todo app' },
+      { path: 'subscribe/', component: todo, name: '订阅' }
     ]
   },
   { path: '*', redirect: '/404', hidden: true }
