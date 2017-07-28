@@ -64,7 +64,6 @@
 - screenfull
 - markdown2html
 - views-tab
-- test
 
 ## 开发
 ```bash
